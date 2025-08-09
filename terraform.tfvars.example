@@ -1,0 +1,13 @@
+# terraform.tfvars.example
+# Example variable values - DO NOT COMMIT with real values
+# In Spacelift, these are set as environment variables (TF_VAR_*)
+
+okta_org_name       = "your-company"
+okta_base_url       = "okta.com"  # or "oktapreview.com" for dev
+okta_client_id      = "0oa1234567890abcdef"
+okta_private_key_id = "kid_1234567890"
+okta_private_key    = <<-EOT
+-----BEGIN RSA PRIVATE KEY-----
+YOUR_PRIVATE_KEY_CONTENT_HERE
+-----END RSA PRIVATE KEY-----
+EOT
