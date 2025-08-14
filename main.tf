@@ -53,3 +53,16 @@ resource "okta_group_schema_property" "push_groups" {
   scope       = "SELF"
   required    = false
 }
+
+# Assignment profile - for role-based app assignments
+resource "okta_group_schema_property" "assignment_profile" {
+  index       = "assignmentProfile"
+  title       = "Assignment Profile"
+  type        = "string"
+  description = "Profile data for application role assignments"
+  master      = "OKTA"
+  permissions = "READ_WRITE"
+  scope       = "SELF"
+  required    = false
+  max_length  = 4096  # Or whatever limit makes sense for your JSON profiles
+}
